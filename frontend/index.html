@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="w-full px-4 py-1">
+  <nav class="w-full p-3 md:px-12 flex justify-center items-center border-b border-gray-400">
+    <div class="w-1/2 flex">
+      <h1 class="logo text-2xl font-bold cursor-pointer">
+      </h1>
+    </div>
+    <div class="w-1/2 flex justify-end">
+      <button class="px-4 py-2 rounded-lg bg-btn-primary text-white" onclick="signin()">Sign in</button>
+    </div>
+  </nav>
+</header>
+  <main class="w-full flex justify-center items-center flex-col lg:flex-row px-4 py-12">
+    <section class="w-full lg:w-[60%] flex flex-col space-y-8 md:px-12">
+      <h1 id="main-heading" class="text-3xl font-bold cursor-pointer">
+      </h1>
+      <p id="main-description" class="w-full  text-slate-500">
+      </p>
+      <button class="px-4 py-3 rounded-lg bg-btn-primary text-white w-full md:w-[50%] self-center" onclick="getstarted()">Get started</button>
+    </section>
+    <section class="w-full lg:w-[40%] hidden lg:block ">
+      <div class="w-full aspect-video flex justify-center items-center">
+        <img src="./assets/landing.png" class="w-full" alt="landing">
+      </div>
+    </section>
+  </main>
+  <footer id="footer-description" class="fixed bottom-0 border-t bg-white border-gray-400 w-full font-semibold text-center py-2 text-xs">
+  </footer>
+  <div id="loader" class="fixed top-0 bottom-0 left-0 right-0 bg-gray-400 opacity-5 hidden justify-center items-center">
+    <div class="w-6 h-6 rounded-full border-b animate-spin border-blue-500"></div>
+  </div>
+  <script type="module" src="./index.js"></script>
+  <script>
+    const signin = ()=>{
+      window.location.href = "signin"
+    }
+    const getstarted = ()=>{
+      window.location.href = "signup"
+    }
+  </script>
+</body>
+</html>
